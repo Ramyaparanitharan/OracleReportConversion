@@ -1,0 +1,35 @@
+<div class="report-title">
+    EMPLOYEE SALARY REPORT
+</div>
+
+<div class="department">
+    Department : {{department}}
+</div>
+
+<button (click)="search()">SEARCH</button>
+
+<table *ngIf="employees.length > 0">
+    <thead>
+        <tr>
+            <th>EMPID</th>
+            <th>NAME</th>
+            <th>DEPARTMENT</th>
+            <th>DESIGNATION</th>
+            <th>SALARY</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.EMPID}}</td>
+            <td>{{emp.EMP_NAME}}</td>
+            <td>{{emp.DEPARTMENT}}</td>
+            <td>{{emp.DESIGNATION}}</td>
+            <td>{{emp.SALARY}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="total">
+    Total Employees : {{employees.length}}
+</div>
